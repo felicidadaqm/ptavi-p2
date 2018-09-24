@@ -6,11 +6,11 @@ import sys
 
 class Calculadora:
 
-	def plus(self, operando1, operando2):
-		return operando1 + operando2
+    def plus(self, operando1, operando2):
+        return operando1 + operando2
 
-	def minus(self, operando1, operando2):
-		return operando1 - operando2
+    def minus(self, operando1, operando2):
+        return operando1 - operando2
 
 calc = Calculadora()
 # instancio el objeto
