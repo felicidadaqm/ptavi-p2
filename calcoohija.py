@@ -4,6 +4,7 @@
 import sys
 import calcoo
 
+
 class CalculadoraHija(calcoo.Calculadora):
 
     operando1 = ""
@@ -37,11 +38,11 @@ if __name__ == "__main__":
     elif sys.argv[2] == "multiplica":
         result = calc.multiply()
     elif sys.argv[2] == "divide":
-        if calc.operando2 == "0":
-            sys.exit("Division by zero is not allowed")
-        else:
-            result = calc.division()
+        result = calc.division()
     else:
-        sys.exit("Operación sólo puede ser sumar o restar.")
+        sys.exit("Operación inválida.")
 
-print(result)
+    try:
+        print(result)
+    except NameError:
+        sys.exit("No se puede imprimir el resultado")
