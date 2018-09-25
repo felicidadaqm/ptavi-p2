@@ -6,16 +6,21 @@ import sys
 
 class Calculadora:
 
-    def plus(self, operando1, operando2):
-        return operando1 + operando2
+    operando1 = ""
+    operando2 = ""
 
-    def minus(self, operando1, operando2):
-        return operando1 - operando2
+    def plus(self):
+        return self.operando1 + self.operando2
+
+    def minus(self):
+        return self.operando1 - self.operando2
 
 calc = Calculadora()
-# instancio el objeto
 
 if __name__ == "__main__":
+
+    calc = Calculadora()
+
     try:
         calc.operando1 = int(sys.argv[1])
         calc.operando2 = int(sys.argv[3])
@@ -23,9 +28,9 @@ if __name__ == "__main__":
         sys.exit("Error: Non numerical parameters")
 
     if sys.argv[2] == "suma":
-        result = calc.plus(calc.operando1, calc.operando2)
+        result = calc.plus()
     elif sys.argv[2] == "resta":
-        result = calc.minus(calc.operando1, calc.operando2)
+        result = calc.minus()
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
 
