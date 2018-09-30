@@ -5,6 +5,7 @@ import sys
 import calcoo
 import calcoohija
 
+
 class CalculadoraPlus(calcoohija.CalculadoraHija):
     operando1 = ""
     operando2 = ""
@@ -16,7 +17,6 @@ if __name__ == "__main__":
         fich = open(fichero)
     except (FileNotFoundError, IndexError):
         sys.exit("Introduzca correctamente el nombre de fichero")
-        
 
     for line in fich.readlines():
 
@@ -45,8 +45,8 @@ if __name__ == "__main__":
         elif operación == "multiplica":
             result = calc.multiply()
             for numeros in elementos[3:]:
-               result = result * int(numeros)
-        
+                result = result * int(numeros)
+
         elif operación == "divide":
             result = calc.division()
             for numeros in elementos[3:]:

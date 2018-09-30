@@ -6,6 +6,7 @@ import calcoo
 import calcoohija
 import csv
 
+
 class CalculadoraPlus(calcoohija.CalculadoraHija):
     operando1 = ""
     operando2 = ""
@@ -14,7 +15,11 @@ if __name__ == "__main__":
 
     calc = CalculadoraPlus()
 
-    fichero = sys.argv[1]
+    try:
+        fichero = sys.argv[1]
+        fich = open(fichero)
+    except (FileNotFoundError, IndexError):
+        sys.exit("Introduzca correctamente el nombre de fichero")
 
     with open(fichero) as File:
         reader = csv.reader(File)
@@ -43,7 +48,7 @@ if __name__ == "__main__":
                 result = calc.multiply()
                 for numeros in row[3:]:
                     result = result * int(numeros)
-            
+
             elif operacion == "divide":
                 result = calc.division()
                 for numeros in row[3:]:
@@ -56,6 +61,3 @@ if __name__ == "__main__":
                 sys.exit("Operación inválida")
 
             print(result)
-
-
-
