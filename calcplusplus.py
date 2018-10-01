@@ -11,6 +11,7 @@ class CalculadoraPlus(calcoohija.CalculadoraHija):
     operando1 = ""
     operando2 = ""
 
+
 if __name__ == "__main__":
 
     calc = CalculadoraPlus()
@@ -30,7 +31,6 @@ if __name__ == "__main__":
             try:
                 calc.operando1 = int(row[1])
                 calc.operando2 = int(row[2])
-
             except ValueError:
                 sys.exit("El fichero está vacío")
 

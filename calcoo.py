@@ -15,6 +15,7 @@ class Calculadora:
     def minus(self):
         return self.operando1 - self.operando2
 
+
 calc = Calculadora()
 
 if __name__ == "__main__":
