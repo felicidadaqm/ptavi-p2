@@ -38,17 +38,14 @@ if __name__ == "__main__":
                 result = calc.plus()
                 for numeros in row[3:]:
                     result = result + int(numeros)
-
             elif operacion == "resta":
                 result = calc.minus()
                 for numeros in row[3:]:
                     result = result - int(numeros)
-
             elif operacion == "multiplica":
                 result = calc.multiply()
                 for numeros in row[3:]:
                     result = result * int(numeros)
-
             elif operacion == "divide":
                 result = calc.division()
                 for numeros in row[3:]:
@@ -56,7 +53,6 @@ if __name__ == "__main__":
                         result = result / int(numeros)
                     except ZeroDivisionError:
                         sys.exit("Division by zero is not allowed")
-
             else:
                 sys.exit("Operación inválida")
 
